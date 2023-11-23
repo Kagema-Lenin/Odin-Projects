@@ -1,0 +1,10 @@
+sequenceDiagram
+  participant browser
+  participant server
+
+  browser->>server: The data is sent via the form's submit
+  activate server
+  server-->>browser: The server instructs the browser to reload the Notes page with a redirect
+  deactivate server
+
+  Note right of browser: The form has no action or method attributes to define how and where to send the input data
